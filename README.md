@@ -1,5 +1,26 @@
 # kube-training
 
+## Start minikube
+```
+minikube start
+🎉  minikube 1.9.2 is available! Download it: https://github.com/kubernetes/minikube/releases/tag/v1.9.2
+💡  To disable this notice, run: 'minikube config set WantUpdateNotification false'
+
+🙄  minikube v1.8.2 on Darwin 10.15.3
+✨  Using the hyperkit driver based on existing profile
+⌛  Reconfiguring existing host ...
+🔄  Starting existing hyperkit VM for "minikube" ...
+🐳  Preparing Kubernetes v1.17.3 on Docker 19.03.6 ...
+🚀  Launching Kubernetes ...
+🌟  Enabling addons: dashboard, default-storageclass, storage-provisioner
+🏄  Done! kubectl is now configured to use "minikube"
+```
+
+## Start minikube dashboard
+```
+minikube dashboard
+```
+
 ## Create
 ```
 kubectl create -f deployment-demo-app.yaml
