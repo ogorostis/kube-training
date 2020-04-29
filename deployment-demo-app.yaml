@@ -9,12 +9,14 @@ spec:
     app: demo-app
   ports:
     - protocol: TCP
-      # Within cluster
-      port: 8080
-      # Port to forward to inside pod / container
+      # External (Outside Cluster)
+      # User http://EXTERNAL-IP:7999/demo/app with GCP
+      # NOTE: minikube not handling this well, use nodePort with `minikube ip`
+      port: 7999
+      # app in container
       targetPort: 8080
-      # Outside Cluster (valid range is 30000-32767)
-      nodePort: 30003
+      #  Cluster Traffic : let kubernetes select that port
+      # nodePort: 30003
   type: LoadBalancer
 status:
   loadBalancer: {}
